@@ -1,0 +1,236 @@
+/* web home */
+a{color: #007bff;}
+a:hover{color: #0099ff;}
+.bg-yellow{background-color: #ffc107;}
+.masthead {
+    height: 100vh;
+    min-height: 40rem;
+    padding-bottom: 0;
+    position: relative;
+}
+.carousel-item{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel{
+    z-index: 0;
+}
+.masthead:before{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0, 0.6), rgba(0, 0, 0, 0.2) 90%);
+    z-index: 1;
+}
+.masthead .carousel+div{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.masthead img{
+    width: auto;
+    height: 300px;
+}
+.masthead a{
+    display: block;
+    border: 1px solid rgba(255, 255, 255, .5);
+    line-height: 60px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .0);
+    padding: 0 30px;
+    margin-top: 36px;
+    font-size: 1.5rem;
+    transition: all .25s ease;
+}
+.masthead a:hover{    
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .2);
+    transition: all .15s ease;
+}
+.masthead a i{
+    position: relative;
+    left: 0;
+    transition: all .25s ease;
+}
+.masthead a:hover i{
+    left: 8px;
+    transition: all .15s ease;
+}
+
+#newslist{
+    display: block;
+    min-height: 100vh;
+}
+#newslist .card-title,#newsModal .card-title{
+    font-size: 1.175rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+#newslist .card-title:after,#newsModal .card-title:after{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #97736f;
+    position: relative;
+    bottom: -10px;
+}
+#newslist .text-right a{
+    display: inline-block;
+    margin-top: 14px;
+    padding-right: 5px;
+}
+#newslist a i{
+    position: relative;
+    left: 0;
+    transition: all .25s ease;
+}
+#newslist a:hover i{
+    left: 5px;
+    transition: all .15s ease;
+}
+.item{
+    width: 98%;
+    margin: 1%;
+    border-radius: 5px;
+    overflow:hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    background-color: #fff;
+}
+#newslist .card-text{
+    word-break: break-all;
+    font-size:1.5rem;
+}
+#newsModal .date{
+    font-size: .75rem;
+    font-weight: normal;
+    padding: 2px 5px;
+    border-radius: 2px;
+    background-color: #392321;
+    color: #fff;
+}
+#newsModal .close:hover{
+    color: #e9af00;
+}
+#newsModal p{
+    padding-top: 10px;
+    color: #555;
+}
+
+#about .d-flex{
+    flex-wrap: wrap;
+}
+.about{
+    padding: 30px 15px 55px;
+    width: 100%;
+}
+.about h2{
+    font-weight: bold;
+    display: inline-block;
+    color: #392321;
+    border: 2px solid #392321;
+    padding: 10px 20px;
+}
+.about h2+div{
+    line-height: 2;
+    color: #555;
+    padding-left: 20px;
+    font-size: 1.25rem;
+}
+.about ul{
+    list-style: none;
+    padding-left: 6px;
+    position: relative;
+    margin: 15px 0 0 17px;
+}
+.about ul:before{
+    display: block;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #392321;
+    position: absolute;
+    top: 0;
+    left: -18px;
+}
+.about ul li{
+    line-height: 2.6;
+    color: #555;
+    font-size: 1.25rem;
+}
+.about ul li a{
+    color: #555;
+    cursor: default;
+}
+.about ul i{
+    display: inline-block;
+    width: 30px;
+    color: #392321;
+}
+.about-img{
+    background: url('https://images.unsplash.com/photo-1515864335-3bafcca4d9f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+@media(min-width:480px){
+    .item{
+        width: 48%;
+    }
+}
+@media(min-width:768px){
+    .item{
+        width: 31%;
+    }
+    .about{
+        width: 50%;
+    }
+    .about h2{
+        font-size: 2rem;
+        margin: 0 0 40px 0;
+    }
+    #about .d-flex{
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .about-img{
+        width: 50%;
+        height: auto;
+    }
+}
+@media(min-width:1024px){
+    .about{
+        padding: 60px 15px 55px;
+    }
+    .about h2{
+        font-size: 3rem;
+        margin: 0 0 40px 20%;
+    }
+    .about h2+div{
+        font-size: 1.5rem;
+        padding-left: 28%;
+    }
+    .about ul{
+        margin: 50px 0 0 28%;
+    }
+    .about ul li{
+        font-size: 1.125rem;
+    }
+}
+@media(min-width:1200px){
+    .item{
+        width: 23%;
+    }
+}

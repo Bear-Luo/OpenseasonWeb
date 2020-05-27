@@ -1,0 +1,134 @@
+.table td{
+    vertical-align: middle;
+}
+.table tbody .text-danger{
+    font-size: .875rem;
+}
+.cart-img{
+    width: 105px;
+}
+.cart-img a{
+    display: block;
+    width: 90px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.table .btn{
+    color: #ccc;
+}
+.table .btn:hover{
+    color: #aaa;
+}
+.order-h5{
+    display: flex;
+    align-items: center;
+}
+.order-h5::before{
+    display: inline-block;
+    content: "";
+    background-color: #ff547b;
+    width: 4px;
+    height: 24px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.order-list{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+}
+.order-list .col-md-6{
+    padding: 0;
+}
+.order-form{
+    width: calc(100% - 30px);
+}
+.step{
+    width: 100%;
+    list-style: none;
+    padding: 0 0 40px 0;
+    display: flex;
+    justify-content: space-around;
+    color: #bbb;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.step i{
+    font-size: 2.125rem;
+    position: relative;
+    padding-right: 20px;
+    font-weight: bold;
+}
+.step i:after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 3px;
+    height: 100%;
+    transform: rotate(30deg);
+    background-color: #bbb;
+    top: 0;
+    right: 5px;
+    border-radius: 1.5px;
+}
+.step .line{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.step .line::before{
+    display: block;
+    content: "";
+    width: 80%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #eaeaea;    
+}
+.step .active{
+    color: #392321;
+}
+.step .active i:after{
+    background-color: #392321;
+}
+.step .line.active::before{
+    background-color: #392321;
+}
+
+@media(max-width:1023px){
+    .order-list{
+        flex-direction: column-reverse;
+    }
+    .order-list .col-md-6{
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+    .order-form{
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px dashed #bbb;
+        width: 100%;
+    }
+}
+@media(max-width:480px){
+    .step li{
+        display: flex;
+        flex-direction: column;
+    }
+    .step li i{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-right: 0;
+    }
+    .step li i:after{
+        position: relative;
+        height: 25px;
+        top: 4px;
+        right: -10px;
+        display: inline-block;
+    }
+}

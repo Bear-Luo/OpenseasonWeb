@@ -1,0 +1,41 @@
+.shopping{
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    list-style: none;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+.shopping li+li{
+    margin-top: 15px;
+}
+.shopping a{
+    display: block;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: rgba(57, 35, 33,.85);
+    border: 1px solid #fffbf0;
+    color: #fff;
+    position: relative;
+}
+.shopping span{
+    position: absolute;
+    color: #fff;
+    font-size: .875rem;
+    background-color: #f24d0e;
+    right: 0;
+    top: -5px;
+    line-height: 1.5rem;
+    min-width: 1.5rem;
+    padding: 0 4px;
+    border-radius: .725rem;
+}
+@media(min-width:480){
+    .shopping{
+        right: 20px;
+    }
+}

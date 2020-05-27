@@ -1,0 +1,330 @@
+/* web product list */
+.product-page .navbar.active.fixed-top{    
+    backdrop-filter: none;
+}
+.productlit-container{
+    display: flex;
+    flex-direction: column;
+}
+.product-page .card{
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow .35s ease;
+}
+.product-page .card:hover{
+    box-shadow: 0 0 0 2px #f5e419;
+    transition: box-shadow .25s ease;
+}
+.product-page .card button{
+    background-color: rgba(255,255,255,.85);
+    border: 0;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-size: 1.125rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    margin: 0 10px 10px 0;
+    color: #462b29;
+    display: none;
+}
+.product-page .mobile-view .card button{
+    display: block;
+}
+.product-page .card:hover button{
+    display: block;
+}
+.product-page .card button:hover {
+    color: #ff547b;
+    background-color: #fff;
+}
+.product-page .card button .fas.fa-heart{
+    color: #ff547b;
+}
+.product-page .card button span{
+    display: none;
+}
+.product-cover{
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.product-cover+div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.search{
+    flex: 1;
+    display: inline-flex;
+    border-bottom: 2px solid #462b29;
+}
+.search input{
+    background-color: transparent;
+    border: 0;
+    padding: 5px;
+    flex: 1;
+    width: 100%;
+}
+.search input:focus,.search button:focus{
+    outline: 0;
+}
+.search button{
+    border: 0;
+    background-color: transparent;
+    color: #462b29;
+    font-size: 1.25rem;
+}
+.sort-block{
+    padding-left: 15px;
+}
+.sort-block button{
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #462b29;
+    width: 82px;
+    display: flex;
+    align-items: center;
+}
+.sort-block button:hover{
+    background-color: #462b29;
+    color: #fff;
+}
+.sort-block button span{
+    margin-right: 8px;
+    flex: 1;
+}
+
+.productlist-sidebar{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.product-page .mobile-view .productlist-sidebar.fixed{
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 25px;
+    z-index: 1;
+    background-color: rgba(255, 251, 240, .8);
+    backdrop-filter: blur(10px);
+}
+.sidebar-menu{
+    height: 80px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0 0 0 15px;
+    overflow: overlay;
+    flex: 1;
+}
+.sidebar-menu li{
+    display: inline-flex;
+    height: 60px;
+    flex: 1;
+}
+.sidebar-menu li+li{
+    margin-left: 10px;
+}
+.sidebar-menu a{
+    white-space: nowrap;
+    line-height: 60px;
+    height: 60px;
+    padding: 0 15px;
+    display: block;
+    background-color: #462b29;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+.sidebar-menu li.active a{
+    color: #f5e419;
+}
+.coupon {
+    position: relative;
+    width: 140px;
+    height: 60px;
+    background-image: 
+      radial-gradient(circle at 1px 5px, transparent 3px, #ffc107 3px, #ffc107 0px), 
+      radial-gradient(circle at 70px 5px, transparent 3px, #ffc107 3px, #ffc107 0px);
+    background-size: 71px 10px;
+    background-position: 0 0, 70px 0;
+    background-repeat: repeat-y;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+} 
+.coupon div:first-child{
+    display: flex;
+    align-items: center;
+    border-right: 1px dashed #fff;
+}
+.coupon div:first-child:before{
+    display: none;
+    content: '優惠碼';
+    padding: 0 5px 0 10px;
+    font-weight: bold;
+}
+.coupon div:first-child span{
+    display: none;
+}
+.coupon div:last-child{
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    line-height: 44px;
+    font-size: 1.125rem;
+}
+.coupon div:last-child span::selection{
+    background: #fff;
+    color: #ffc107;
+}
+.coupon div:last-child a{
+    font-size: 1rem;
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 6px;
+}
+.coupon div:last-child a:hover{
+    background-color: rgba(255,255,255,.35);
+}
+.coupon div:last-child:before,.coupon div:last-child:after{
+    display: block;
+    content: "";
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.coupon div:last-child a{
+    color: #fff;
+}
+@media (max-width: 1023px){
+    .container{
+        max-width: 100%;
+        padding: 0 25px;
+    }
+}
+@media(max-width:767px){    
+    .product-page .navbar.nav-bg.fixed-top{    
+        backdrop-filter: blur(10px);
+    }
+}
+@media (max-width: 479px){
+    .container{
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+@media(min-width:480px){    
+    .coupon div:first-child:before{
+        display: block;
+    }
+    .coupon {
+        width: 220px;
+        height: 60px;
+        background-image: 
+          radial-gradient(circle at 1px 5px, transparent 3px, #ffc107 3px, #ffc107 0px), 
+          radial-gradient(circle at 110px 5px, transparent 3px, #ffc107 3px, #ffc107 0px);
+        background-size: 111px 10px;
+        background-position: 0 0, 110px 0;
+    }
+}
+@media(min-width:1024px){    
+    .product-page .navbar.fixed-top{    
+        backdrop-filter: none;
+    }
+    .productlist-sidebar{
+        display: block;
+        height: auto;
+    }
+    .product-page .card-block{
+        width: calc(100% - 280px);
+    }
+    .productlit-container{
+        flex-direction: row;
+    }
+    .sidebar-menu{
+        height: auto;
+        width: 220px;
+        padding: 0;
+        margin: 0 60px 0 0;
+        display: block;
+    }
+    .sidebar-menu li{
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+    .sidebar-menu a{
+        height: auto;
+        color: #392321;
+        font-size: 1.125rem;
+        font-weight: bold;
+        display: block;
+        padding: 10px 0;
+        line-height: 1.7;
+        background-color: transparent;
+    }
+    .sidebar-menu a:hover{
+        background-color: rgba(255,255,255,.6);
+    }
+    .sidebar-menu li.active a{
+        background-color: #fff;
+        color: #ffc107;
+    }
+    .sidebar-menu+div{
+        flex:1;
+    }
+    .coupon {
+        width: 220px;
+        height: 125px;
+        margin-bottom: 20px;
+        background-image: 
+          radial-gradient(circle at 1px 8px, transparent 6px, #ffc107 6px, #ffc107 0px), 
+          radial-gradient(circle at 109px 8px, transparent 6px, #ffc107 6px, #ffc107 0px);
+        background-size: 111px 18px;
+        background-position: 0 0, 110px 0;
+        display: flex;
+    } 
+    .coupon div:first-child{
+        width: 75px;
+    }
+    .coupon div:first-child:before{
+        display: none;
+    }
+    .coupon div:first-child span{
+        text-align: center;
+        transform: rotate(90deg);
+        display: block;
+        font-weight: bold;
+    }
+    .coupon div:last-child{
+        height: calc(100% - 30px);
+        font-size: 1.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
