@@ -79,7 +79,6 @@
             <div class="form-group">
               <label for="due_date">到期日</label>
               <date-picker v-model="due_date" value-type="format" format="YYYY/MM/DD" :editable="false" id="due_date"></date-picker>
-              <!-- <input type="date" v-model="due_date" class="form-control" id="due_date" /> -->
             </div>
             <div class="form-group">
               <label for="percent">折扣百分比</label>
