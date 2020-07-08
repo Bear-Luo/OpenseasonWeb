@@ -91,7 +91,7 @@
             <h5 class="card-title">{{ newsContent.title }}</h5>
             <span class="date">{{ newsContent.year+'/'+newsContent.month+'/'+newsContent.day }}</span>
             <p>{{ newsContent.content }}</p>
-            <img :src="newsContent.imgUrl" alt="newsContent.title" class="img-fluid" />
+            <img :src="newsContent.imgUrl" :alt="newsContent.title" class="img-fluid" />
           </div>
         </div>
       </div>

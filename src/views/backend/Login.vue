@@ -62,23 +62,7 @@ export default {
           vm.$store.commit('LOADING', false)
         }
       })
-    },
-    checkLogin () {
-      const vm = this
-      const url = `${process.env.VUE_APP_APIPATH}/api/user/check`
-
-      vm.$store.commit('LOADING', true)
-      vm.$http.post(url).then(response => {
-        if (response.data.success) {
-          vm.$router.push('/admin/products')
-        } else {
-          vm.$store.commit('LOADING', false)
-        }
-      })
     }
-  },
-  created () {
-    this.checkLogin()
   }
 }
 </script>

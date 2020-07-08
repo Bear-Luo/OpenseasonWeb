@@ -10,7 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: true,
   state: {
-    isLoading: true,
+    isLoading: false,
     messages: [],
     fadeIn: 15,
     isShow: false
