@@ -58,12 +58,12 @@
       <section class="page-section bg-yellow py-5" :class="{'minh-100vh':newsStatus.minHeight}" id="newslist">
         <div class="container fade" :class="{'show':newsStatus.newsShow, 'd-hidden':!newsStatus.newsShow}">
           <div class="grid">
-            <div class="item" v-for="(card,index) in newNews" :key="index" @click="openNews(index)">
+            <div class="item" v-for="card in newNews" :key="card.id" @click="openNews(card.id)">
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="#" @click.prevent="openNews(index)">{{ card.title }}</a>
+                  <a href="#" @click.prevent="openNews(card.id)">{{ card.title }}</a>
                 </h5>
-                <p v-if="mobileView">{{ card.content | wordCount }} <a href="#" class="more" @click.prevent="openNews(index)">看更多</a></p>
+                <p v-if="mobileView">{{ card.content | wordCount }} <a href="#" class="more" @click.prevent="openNews(card.id)">看更多</a></p>
                 <div>
                   <img :src="card.imgUrl" :alt="card.title" class="img-fluid" />
                 </div>
@@ -113,7 +113,7 @@ export default {
     return {
       navBgColor: false,
       fixedTop: true,
-      news: [],
+      news: News,
       newsContent: {},
       aboutShow: false,
       newsStatus: {
@@ -159,7 +159,6 @@ export default {
     getNews () {
       this.$store.commit('LOADING', true)
       this.newsStatus.minHeight = true
-      this.news = News
       setTimeout(() => {
         /*
         global waterfall
@@ -167,11 +166,16 @@ export default {
         waterfall('.grid')
         this.$store.commit('LOADING', false)
         this.newsStatus.minHeight = false
-      }, 500)
+      }, 1000)
     },
-    openNews (i) {
+    openNews (para) {
       this.$store.commit('LOADING', true)
-      this.newsContent = this.news[i]
+      for (let i = 0; i < News.length; i++) {
+        if (News[i].id === para) {
+          this.newsContent = this.news[i]
+          break
+        }
+      }
       this.$store.commit('LOADING', false)
       $('#newsModal').modal('show')
     },
@@ -181,15 +185,15 @@ export default {
       setTimeout(() => {
         vm.newsStatus.minHeight = true
         vm.newsStatus.nowPage++
-        vm.newsStatus.pageStart += this.newsStatus.groupNum
-        vm.newsStatus.showItems = this.newsStatus.showItems * this.newsStatus.nowPage
+        vm.newsStatus.pageStart += vm.newsStatus.groupNum
+        vm.newsStatus.showItems = vm.newsStatus.showItems * vm.newsStatus.nowPage
       }, 200)
       setTimeout(() => {
         waterfall('.grid')
         window.scroll(0, vm.newsStatus.rect)
         vm.newsStatus.newsShow = true
         vm.newsStatus.minHeight = false
-      }, 600)
+      }, 1000)
     },
     newsPrev () {
       const vm = this
@@ -197,12 +201,12 @@ export default {
       vm.newsStatus.minHeight = true
       setTimeout(() => {
         vm.newsStatus.nowPage--
-        vm.newsStatus.pageStart -= this.newsStatus.groupNum
-        vm.newsStatus.showItems = this.newsStatus.groupNum * this.newsStatus.nowPage
+        vm.newsStatus.pageStart -= vm.newsStatus.groupNum
+        vm.newsStatus.showItems = vm.newsStatus.groupNum * vm.newsStatus.nowPage
         if (vm.newsStatus.pageStart === 0) {
           vm.newsStatus.showItems = 8
         } else {
-          vm.newsStatus.showItems = this.newsStatus.pageStart * this.newsStatus.nowPage
+          vm.newsStatus.showItems = vm.newsStatus.pageStart * vm.newsStatus.nowPage
         }
       }, 200)
       setTimeout(() => {
@@ -210,7 +214,7 @@ export default {
         window.scroll(0, vm.newsStatus.rect)
         vm.newsStatus.newsShow = true
         vm.newsStatus.minHeight = false
-      }, 600)
+      }, 1000)
     },
     _isMobile () {
       const flag = navigator.userAgent.match(
