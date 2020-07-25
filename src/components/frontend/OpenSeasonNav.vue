@@ -40,7 +40,7 @@
             >角獵記事</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/product_list" @click.native="closeMenu">手作產品</router-link>
+            <router-link class="nav-link" to="/product_list" @click.native="scrollTop();closeMenu()">手作產品</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/login" target="_blank" @click.native="closeMenu">商品管理</router-link>
@@ -77,9 +77,7 @@ export default {
       window.scroll(0, elOffset)
     },
     scrollTop () {
-      if (this.$route.path === '/openseason_home') {
-        window.scroll(0, 0)
-      }
+      window.scroll(0, 0)
     },
     closeMenu () {
       $('#navbarResponsive').collapse('hide')
