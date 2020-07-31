@@ -27,8 +27,11 @@
 ## 前台介紹
 ### 首頁
 * 以滿版的形象圖輪播，並引導客戶前往賣場
+
 ![](https://user-images.githubusercontent.com/61472045/89052882-ed642e00-d388-11ea-8433-30bfe79c4e61.png)
+
 * 最新消息的瀑布式排版使用 Waterfall.js
 * 點選卡片後會有內容彈窗
 * 使用 mobile 瀏覽最新消息時，卡片別於 PC 會顯示部分內文
+
 ![](https://user-images.githubusercontent.com/61472045/89059539-f4dd0480-d393-11ea-86fc-c3bde541f152.png)
