@@ -72,4 +72,9 @@
 
 ![](https://user-images.githubusercontent.com/61472045/89065839-fc55db00-d39e-11ea-82a2-24e4e9844bfb.png)
 
+## 聲明
+* 圖片來源： [Unsplash](https://unsplash.com/) & [角獵咖啡粉絲頁](https://www.facebook.com/pages/category/Coffee-Shop/%E8%A7%92%E7%8D%B5%E5%92%96%E5%95%A1-Open-Season-642663222541449/)
+* 本作品為學習用途，無任何商業用途
+* 感謝角獵咖啡素材提供
+
 
