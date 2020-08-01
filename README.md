@@ -45,7 +45,7 @@
 ![](https://user-images.githubusercontent.com/61472045/89060871-5605d780-d396-11ea-9ce8-f990653c2c72.png)
 
 ### 商品詳細頁
-* 加入關注、加入購物車按鈕與商品列表頁卡片的按鈕為同一 component
+* 加入關注、加入購物車按鈕與商品列表頁卡片的按鈕為同一 component，並用 EventBus 改變欲訂購的數量
 * 可選擇要加入的數量，因為角獵咖啡不方便接大訂單，所以購買數量最多到10
 
 ![](https://user-images.githubusercontent.com/61472045/89063890-8d2ab780-d39b-11ea-9174-9a8154d57cac.png)
