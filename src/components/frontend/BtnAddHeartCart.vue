@@ -97,8 +97,18 @@ export default {
           }
         })
       } else if (sumQty > 10) {
-        vm.$store.commit('LOADING', false)
-        vm.$store.dispatch('updateMessage', { msg: '不好意思本商品最多一次只能購買10個', status: 'dark' })
+        const subtract = 10 - qty
+        if (subtract === 0) {
+          vm.$store.commit('LOADING', false)
+          vm.$store.dispatch('updateMessage', { msg: '不好意思本商品最多一次只能購買10個，您已購買10個此產品。', status: 'dark' })
+        } else if (subtract > 0) {
+          vm.$http.delete(url).then(response => {
+            if (response.data.success) {
+              vm.addtoCart(item, 10)
+            }
+          })
+          vm.$store.dispatch('updateMessage', { msg: '不好意思本商品最多一次只能購買10個, 大量購買請來電聯繫', status: 'dark' })
+        }
       }
     },
     addHeart (id) {
