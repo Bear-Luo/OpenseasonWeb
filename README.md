@@ -54,7 +54,7 @@
 
 ![](https://user-images.githubusercontent.com/61472045/89063890-8d2ab780-d39b-11ea-9174-9a8154d57cac.png)
 
-* 相似商品為同類型商品隨機取三個，如該類型只有一個商品則此區域不顯示
+* 相似商品為同類別商品隨機取三個，如該類別只有一個商品則此區域不顯示
 
 ![](https://user-images.githubusercontent.com/61472045/89064604-df200d00-d39c-11ea-9544-629b0237eb51.png)
 
