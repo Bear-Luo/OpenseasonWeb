@@ -7,7 +7,7 @@
 * VueRouter
 * VueComponents
 * API
-* JS
+* JavaScript
 * jQuery
 * RWD
 * Bootstrap 4
