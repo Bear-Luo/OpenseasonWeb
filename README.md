@@ -2,7 +2,7 @@
 > https://bear-luo.github.io/openseasonweb/#/
 
 ## Skill
-* Vue Cli
+* Vue CLI
 * Vuex
 * VueRouter
 * VueComponents
