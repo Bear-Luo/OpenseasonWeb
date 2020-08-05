@@ -4,8 +4,8 @@
 ## Skill
 * Vue CLI
 * Vuex
-* VueRouter
-* VueComponents
+* Vue Router
+* Vue Components
 * API
 * JavaScript
 * jQuery
