@@ -1,5 +1,5 @@
 # 角獵咖啡電商網站
-> [https://bear-luo.github.io/OpenseasonWeb/#/](https://bear-luo.github.io/OpenseasonWeb/#/)
+> https://bear-luo.github.io/OpenseasonWeb/#/
 
 ## Skill
 * Vue CLI
